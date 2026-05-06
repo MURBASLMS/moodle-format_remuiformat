@@ -26,7 +26,8 @@ defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
 
-if ($CFG->branch >= '404') {
+// Hooks disabled in MUstable40 custom branch
+if (false && $CFG->branch >= '404') {
     $callbacks = [
         [
             'hook' => \core\hook\output\before_standard_head_html_generation::class,
